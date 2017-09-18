@@ -1,0 +1,32 @@
+Pac Rainbow,NAMCO,2010,0
+147.2,5,45000
+# Used to be 45000
+
+# Format of the above: 
+# Line 1: <Song Name> <Producer/Artist> <Year> <Index of Song stored in Conductor>
+# Line 2: <BPM>, <How long to wait until to play the song>, <Starting timesample where the song should start playing>
+
+# Previous Formating Notes:
+# <isABeat> <startbeat> <syncopateScale>
+# <isRepeat> <beatDistance> <numOfRepeat>
+# <isSpawningBomb> <descendTime (in beats)> <detonationTime (in beats)> <bombType>
+# <spawnType> <xLoc> <yLoc>
+# TODO: Maybe in the future, you could designate at which certain beat to explode at
+# TODO: Maybe implement health collectable on the field. It is destroyed by explosions but player must navigate towards it to get it.
+# TODO: Implement a field that determines which kind of camera shake to invoke, as well as the volume to set for the explosion (too loud sometimes played together)
+# TODO: An infinite repeat functionality and a turn off functionality as well.
+
+# VisualBeat
+# Format: <Starting Beat> <Syncopate Scale> <isRepeat> <separationOfRepeat> <numberOfRepeat> <typeOfVisualEffect>
+0,0,1,2,30,0
+64,0,1,1,60,0
+0,0,1,1,4,14
+8,0,1,2,4,15
+16,0,1,1,16,16
+
+# Enemy
+# Format: <Starting Beat> <Syncopate Scale> <isRepeat> <separationOfRepeat> <numberOfRepeat> <typeOfEnemy> <other stuff to come later...>
+0,0,1,2,30,0
+64,0,1,1,60,0
+96,0.5,1,1,28,0
+128,0,1,1,64,0
