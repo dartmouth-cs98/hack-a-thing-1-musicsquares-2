@@ -20,7 +20,10 @@ Pac Rainbow,NAMCO,2010,0
 # Format: <Starting Beat> <Syncopate Scale> <isRepeat> <separationOfRepeat> <numberOfRepeat> <typeOfVisualEffect>
 0,0,1,2,30,0
 64,0,1,1,60,0
-128,0,1,1,92,0
+128,0,1,1,60,0
+192,0,1,1,92,0
+288,0,1,2,14,0
+320,0,1,1,60,0
 0,0,0,1,1,14
 64,0,0,0,0,15
 128,0,0,0,0,15
@@ -30,4 +33,4 @@ Pac Rainbow,NAMCO,2010,0
 0,0,1,2,30,0
 64,0,1,1,60,0
 96,0.5,1,1,28,0
-128,0,1,1,92,0
+128,0,1,1,60,0
