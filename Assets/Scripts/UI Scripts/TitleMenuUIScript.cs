@@ -15,7 +15,7 @@ public class TitleMenuUIScript : MonoBehaviour {
     [SerializeField]
     private TransitionLayerScript transitionLayer;
 
-    private bool startAnimEnd;
+    private bool startingAnimFinished;
     private float subtitleFlashingTime = 0f;
     private Color32 subtitleColor;
 
@@ -37,7 +37,7 @@ public class TitleMenuUIScript : MonoBehaviour {
                 quitNotifAppear();
         }
 
-        if (startAnimEnd) {
+        if (startingAnimFinished) {
             subtitleFlashingTime += Time.deltaTime;
             subtitleColor.a = (byte)Mathf.RoundToInt((-0.5f * Mathf.Cos(subtitleFlashingTime * 2 * Mathf.PI) + 0.5f) * 255f);
             subtitleText.faceColor = subtitleColor;
@@ -46,17 +46,17 @@ public class TitleMenuUIScript : MonoBehaviour {
 
     void HandleTouchEvent() {
         if (!quitNotif.activeInHierarchy && Input.GetMouseButtonDown(0)) {
-            if (!startAnimEnd) {
+            if (!startingAnimFinished) {
                 // TODO: Later, make this skip title Transition
             }
             else {
-                GameObject.FindGameObjectWithTag(Tags.SCENE_MANAGER_TAG).GetComponent<SceneManagerScript>().loadSelectionScreen();
+                GameObject.FindGameObjectWithTag(Tags.SCENE_MANAGER_TAG).GetComponent<SceneManagerScript>().selectionScreenTransition();
             }
         }
     }
 
     public void titleFlashAnimEnd() {
-        startAnimEnd = true;
+        startingAnimFinished = true;
     }
 
     void quitNotifAppear() {

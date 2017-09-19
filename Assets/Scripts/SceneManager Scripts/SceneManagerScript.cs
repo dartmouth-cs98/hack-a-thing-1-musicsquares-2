@@ -11,7 +11,6 @@ public class SceneManagerScript : MonoBehaviour {
      * Make animation work
      */
     public static SceneManagerScript instance = null;
-    private TransitionLayerScript transitionLayer;
 
     void Awake() {
         if (instance == null)
@@ -20,18 +19,31 @@ public class SceneManagerScript : MonoBehaviour {
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
 
-        transitionLayer = GameObject.FindGameObjectWithTag(Tags.TRANSITION_LAYER_TAG).GetComponent<TransitionLayerScript>();
     }
 
-    private void Start() {
+    public void titleScreenTransition() {
+        TransitionLayerScript.instance.clearToBlackAnim(0);
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    public void selectionScreenTransition() {
+        TransitionLayerScript.instance.clearToWhiteAnim(0);
+    }
+
+    public void mainGameTransition() {
+        TransitionLayerScript.instance.clearToBlackAnim(1);
+    }
+
+    public void loadTitleScreen() {
+        SceneManager.LoadScene(Tags.SCENE_TITLESCREEN);
+        TransitionLayerScript.instance.startTitleAnim();
+    }
 
     public void loadSelectionScreen() {
         SceneManager.LoadScene(Tags.SCENE_SELECTIONSCREEN);
+        TransitionLayerScript.instance.whiteToClearAnim();
+    }
+
+    public void loadMainGame() {
+
     }
 }
