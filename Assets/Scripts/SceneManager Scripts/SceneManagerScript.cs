@@ -44,6 +44,7 @@ public class SceneManagerScript : MonoBehaviour {
     }
 
     public void loadMainGame() {
-
+        SceneManager.LoadScene(Tags.SCENE_MAINGAMESCREEN);
+        TransitionLayerScript.instance.blackToClearAnim();
     }
 }

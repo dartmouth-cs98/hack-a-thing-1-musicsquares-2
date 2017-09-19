@@ -214,4 +214,8 @@ public class Conductor : MonoBehaviour {
         float minorBeat = Mathf.Floor(((currentMilli - (majorBeat * milliPerBeat)) / milliPerBeat) * 4);
         //beatCounter.text = majorBeat + " : " + minorBeat;
     }
+
+    public void debugBackToSelection() {
+        SceneManagerScript.instance.selectionScreenTransition();
+    }
 }

@@ -27,7 +27,7 @@ public class SceneBehaviorScript : MonoBehaviour {
     }
 
     public void Start() {
-        loadSceneObjects(4, 0);
+        loadSceneObjects(2, 0);
     }
 
     public void loadSceneObjects(int difficulty, int spawnMode) {

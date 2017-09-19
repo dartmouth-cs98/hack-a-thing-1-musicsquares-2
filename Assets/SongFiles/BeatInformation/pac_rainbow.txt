@@ -20,13 +20,14 @@ Pac Rainbow,NAMCO,2010,0
 # Format: <Starting Beat> <Syncopate Scale> <isRepeat> <separationOfRepeat> <numberOfRepeat> <typeOfVisualEffect>
 0,0,1,2,30,0
 64,0,1,1,60,0
-0,0,1,1,4,14
-8,0,1,2,4,15
-16,0,1,1,16,16
+128,0,1,1,92,0
+0,0,0,1,1,14
+64,0,0,0,0,15
+128,0,0,0,0,15
 
 # Enemy
 # Format: <Starting Beat> <Syncopate Scale> <isRepeat> <separationOfRepeat> <numberOfRepeat> <typeOfEnemy> <other stuff to come later...>
 0,0,1,2,30,0
 64,0,1,1,60,0
 96,0.5,1,1,28,0
-128,0,1,1,64,0
+128,0,1,1,92,0

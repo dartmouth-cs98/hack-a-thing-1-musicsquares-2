@@ -19,6 +19,10 @@ public class SelectionMenuUIScript : MonoBehaviour {
     }
 
     public void goToTitleScreen() {
-        GameObject.FindGameObjectWithTag(Tags.SCENE_MANAGER_TAG).GetComponent<SceneManagerScript>().titleScreenTransition();
+        SceneManagerScript.instance.titleScreenTransition();
+    }
+
+    public void tempEasyButtonSelected() {
+        SceneManagerScript.instance.mainGameTransition();
     }
 }
